@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/l3costa/orm_node_mysql/issues"
   },
-  "homepage": "https://github.com/l3costa/orm_node_mysql#readme"
+  "homepage": "https://github.com/l3costa/orm_node_mysql#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
