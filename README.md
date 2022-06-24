@@ -14,3 +14,11 @@ docker run --name=$DB_NAME -d -p 3306:3306 \
 -e MYSQL_USER=sa -e MYSQL_PASSWORD=sa \
 -e MYSQL_DATABASE=$DB_NAME mysql:5.6
 ```
+
+## Sequelize
+
+Apply all seed to load database
+
+```bash 
+npx sequelize-cli db:seed:all
+```
