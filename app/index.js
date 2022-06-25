@@ -1,20 +1,14 @@
 const express = require("express");
+const routes = require("./routes")
+
 const app = express()
 
-app.use(
-    express.json()
-)
+routes(app)
 
-const port = process.env.PORT || 3000;
-
-app.get("/test", (_, resp) => {
-    resp
-        .status(200)
-        .send({ "message": "Bem vindo a API" })
-})
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
     console.log(`App started on port : ${port}`);
 })
 
-export default app
+module.exports = app
