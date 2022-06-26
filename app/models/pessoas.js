@@ -8,6 +8,12 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Pessoas.associate = function (models) {
     // associations can be defined here
+    Pessoas.hasMany(models.Turmas, {
+      foreingKey: "docente_id"
+    })
+    Pessoas.hasMany(models.Matriculas, {
+      foreingKey: "estudante_id"
+    })
   };
   return Pessoas;
 };
